@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Lista de Clientes</title>
+</head>
+<body>
+    <h1>Lista de Clientes</h1>
+    <br>
+    <br>
+    <table border="1">
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Email</th>
+                <th>Data Última Interação</th>
+                <th>Status Follow-Up</th>
+                <th>Data Próximo Follow-Up</th>
+                <th>Descrição Última Interação</th>
+            </tr>
+            {% for cliente in cliente %}
+                <tr>
+                    <td>{{ cliente.nome_cliente }}</td>
+                    <td>{{ cliente.cpf_cliente }}</td>
+                    <td>{{ cliente.email_cliente }}</td>
+                    <td>{{ cliente.data_ultima_interacao }}</td>
+                    <td>{{ cliente.status_follow_up }}</td>
+                    <td>{{ cliente.data_proximo_followup }}</td>
+                    <td>{{ cliente.descricao_ultima_interacao }}</td>
+                </tr>
+            {% endfor %}
+    </table>
+    <a href="{{ url_for('index') }}" class="btn">Página inicial</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Lista de Funcionários</title>
+</head>
+<body>
+    <h1>Lista de Funcionários</h1>
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Email</th>
+        </tr>
+        {% for i in funcionario %}
+            <tr>
+                <td>{{ i.nome_funcionario }}</td>
+                <td>{{ i.cpf_funcionario }}</td>
+                <td>{{ i.email_funcionario }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('index') }}" class="btn">Página inicial</a>
+</body>
+</html>

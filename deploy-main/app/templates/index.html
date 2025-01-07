@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>CRM Bleach</title>
+</head>
+<body>
+    <h1>CRM Beach</h1>
+    <p>O controle que a sua empresa precisa!</p>
+    <br>
+    <a href="{{ url_for('adicionar') }}" class="btn">Cadastrar Funcionário</a>
+    <br>
+    <br>
+    <a href="{{ url_for('adicionar_cliente') }}" class="btn">Cadastrar Cliente</a>
+    <br>
+    <br>
+    <a href="{{ url_for('adicionar_produto') }}" class="btn">Cadastrar Produto</a>
+    <br>
+    <br>
+    <a href="{{ url_for('registro_estoque') }}" class="btn">Registro de estoque</a>
+    <br>
+    <br>
+    <a href="{{ url_for('registro_tarefa') }}" class="btn">Registro de tarefa</a>
+    <br>
+    <br>
+    <a href="{{ url_for('registro_interacao') }}" class="btn">Registro de interação</a>
+    <br>
+    <br>
+    <a href="{{ url_for('historico_compra') }}" class="btn">Histórico de compras</a>
+    
+</body>
+</html>

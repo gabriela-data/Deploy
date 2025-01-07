@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Adicionar Cliente</title>
+</head>
+<body>
+    <h1>Cadastrar Cliente</h1>
+    <div>
+        <form method="post" action="{{ url_for('adicionar_cliente') }}">
+            {{ form.csrf_token }}
+            
+            {{ form.nome_cliente.label }} 
+            {{ form.nome_cliente }}
+            <br>
+            <br>
+            {{ form.cpf_cliente.label }} 
+            {{ form.cpf_cliente }}
+            <br>
+            <br>
+            {{ form.email_cliente.label }} 
+            {{ form.email_cliente }}
+            <br>
+            <br>
+            {{ form.data_ultima_interacao.label }}
+            {{ form.data_ultima_interacao }}
+            <br>
+            <br>
+            {{ form.status_follow_up.label }}
+            {{ form.status_follow_up }}
+            <br>
+            <br>
+            {{ form.data_proximo_followup.label }}
+            {{ form.data_proximo_followup }}
+            <br>
+            <br>
+            {{ form.descricao_ultima_interacao.label }}
+            {{ form.descricao_ultima_interacao }}
+            <br>
+            <br>
+        </form>
+    </div>
+    <br>
+    <input type="submit" value="Cadastrar Cliente" class="btn">
+    <br>
+    <a href="{{ url_for('lista_clientes') }}" class="btn">Lista de Clientes</a>
+    <br>
+    <a href="{{ url_for('index') }}" class="btn">Página inicial</a>
+</body>
+</html>

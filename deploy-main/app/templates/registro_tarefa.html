@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Adicionar Tarefa</title>
+</head>
+<body>
+    <h1>Adicionar Tarefa</h1>
+    <form method="post" action="{{ url_for('registro_tarefa') }}">
+        {{ form.csrf_token }}
+        
+        {{ form.data_tarefa.label }} 
+        {{ form.data_tarefa }}
+        <br>
+        <br>
+        {{ form.nome_tarefa.label }} 
+        {{ form.nome_tarefa }}
+        <br>
+        <br>
+        {{ form.status_tarefa.label }} 
+        {{ form.status_tarefa }}
+        <br>
+    </form>
+    <br>
+        <input type="submit" value="Adicionar Tarefa" class="btn">
+        <br>
+        <a href="{{ url_for('lista_tarefas') }}" class="btn">Lista de Tarefas</a>
+        <br>
+        <a href="{{ url_for('index') }}" class="btn">Página inicial</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Cadastrar Funcionário</title>
+</head>
+<body>
+    <h1>Cadastrar Funcionário</h1>
+        <form method="post" action="{{ url_for('adicionar') }}">
+            {{ form.csrf_token }}
+            {{ form.nome_funcionario.label }} {{ form.nome_funcionario }}
+            <br>
+            <br>
+            {{ form.cpf_funcionario.label }} {{ form.cpf_funcionario }}
+            <br>
+            <br>
+            {{ form.email_funcionario.label }} {{ form.email_funcionario }}
+            <br>
+            <br>
+        </form>
+        <input type="submit" value="Cadastrar Funcionário" class="btn">
+        <br>
+        <a href="{{ url_for('lista_funcionarios') }}" class="btn">Lista de Funcionários</a>
+        <br>
+        <a href="{{ url_for('index') }}" class="btn">Página inicial</a>
+</body>
+</html>

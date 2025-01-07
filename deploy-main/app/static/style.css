@@ -1,0 +1,108 @@
+/* Reset de estilos padrão para garantir consistência */
+body, h1, p, a, form {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    /* Adiciona um cabeçalho à página */
+    background-color: #333;
+    color: #fff;
+    padding: 20px; /* Aumenta a distância do topo do cabeçalho */
+    text-align: left;
+}
+
+h1 {
+    font-family: 'Product Sans', Arial, sans-serif;
+    color: #4ca1fceb;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    /* Adiciona estilo aos formulários */
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #4ca1fceb;
+    border-radius: 8px;
+    text-align: center; /* Centraliza o texto dentro do formulário */
+}
+
+p {
+    color: #666;
+}
+
+a {
+    color: #4ca1fceb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Espaçamento entre os elementos */
+br {
+    margin-bottom: 10px;
+}
+
+/* Melhoria no design dos botões */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid #4ca1fceb;
+    border-radius: 8px;
+    color: #4ca1fceb;
+    background-color: #fff;
+}
+
+.btn:hover {
+    background-color: #4ca1fceb;
+    color: #fff;
+}
+
+/* Melhoria no design das tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 2px solid #4ca1fceb;
+    padding: 12px;
+    text-align: left;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+th {
+    background-color: #4ca1fceb;
+    color: #fff;
+}
+
+/* Bloco de código para tornar a tabela responsiva */
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

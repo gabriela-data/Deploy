@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Lista de Estoque</title>
+</head>
+<body>
+    <h1>Lista de Estoque</h1>
+    <br>
+    <br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ID do Produto</th>
+                <th>Quantidade do Produto</th>
+                <th>Status do Estoque</th>
+                <th>ID do Galpão</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for estoque_itens in estoque_itens %}
+                <tr>
+                    <td>{{ estoque_itens.id_estoque }}</td>
+                    <td>{{ estoque_itens.id_produto }}</td>
+                    <td>{{ estoque_itens.qtd_produto }}</td>
+                    <td>{{ estoque_itens.status_estoque }}</td>
+                    <td>{{ estoque_itens.id_galpao }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="{{ url_for('index') }}" class="btn">Página inicial</a>
+</body>
+</html>

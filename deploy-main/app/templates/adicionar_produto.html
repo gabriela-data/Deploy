@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Cadastro de Produto</title>
+</head>
+<body>
+    <h1>Cadastrar Produto</h1>
+    <form method="post" action="{{ url_for('adicionar_produto') }}">
+        {{ form.csrf_token }}
+        
+        {{ form.nome_produto.label }} 
+        {{ form.nome_produto }}
+        <br>
+        <br>
+        {{ form.preco_produto.label }} 
+        {{ form.preco_produto }}
+        <br>
+        
+    </form>
+        <br>
+        <input type="submit" value="Adicionar Produto" class="btn">
+        <br>
+        <a href="{{ url_for('lista_produtos') }}" class="btn">Lista de produtos</a>
+        <br>
+        <a href="{{ url_for('index') }}" class="btn">Página inicial</a>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Registrar Interação</title>
+</head>
+<body>
+    <h1>Registrar Interação</h1>
+    <form method="post" action="{{ url_for('registro_interacao') }}">
+        {{ form.csrf_token }}
+
+        {{ form.id_cliente.label }}
+        {{ form.id_cliente }}
+        <br>
+        <br>
+        {{ form.id_funcionario.label }}
+        {{ form.id_funcionario }}
+        <br>
+        <br>
+        {{ form.data_interacao.label }}
+        {{ form.data_interacao }}
+        <br>
+        <br>
+        {{ form.tipo_interacao.label }}
+        {{ form.tipo_interacao }}
+        <br>
+        <br>
+        {{ form.descricao_interacao.label }}
+        {{ form.descricao_interacao }}
+        <br>
+        <br>
+        {{ form.registro_interacaocol.label }}
+        {{ form.registro_interacaocol }}
+        <br>
+        <br>
+        {{ form.etapa_followup.label }}
+        {{ form.etapa_followup }}
+        <br>
+        <br>
+        {{ form.status_followup.label }}
+        {{ form.status_followup }}
+        <br>
+        <br>
+        {{ form.data_prox_followup.label }}
+        {{ form.data_prox_followup }}
+        <br>
+        
+    </form>
+    <br>
+        <input type="submit" value="Registrar Interação" class="btn">
+        <br>
+    <a href="{{ url_for('index') }}" class="btn" >Página inicial</a>
+</body>
+</html>

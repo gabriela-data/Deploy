@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Histórico de Compras</title>
+</head>
+<body>
+    <h1>Histórico de Compras</h1>
+
+    <table border="1">
+        <tr>
+            <th>ID Compra</th>
+            <th>Data da Compra</th>
+            <th>ID Cliente</th>
+            <th>ID Produto</th>
+        </tr>
+
+        {% for historico_compras in historico_compras %}
+            <tr>
+                <td>{{ historico_compras.id_compra }}</td>
+                <td>{{ historico_compras.data_compra }}</td>
+                <td>{{ historico_compras.id_cliente }}</td>
+                <td>{{ historico_compras.id_produto }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br>
+        <br>
+        <a href="{{ url_for('index') }}" class="btn">Página inicial</a>
+     
+</body>
+</html>

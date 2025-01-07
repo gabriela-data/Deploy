@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Adicionar Estoque</title>
+</head>
+<body>
+    <h1>Adicionar Estoque</h1>
+    <form method="post" action="{{ url_for('registro_estoque') }}">
+        {{ form.csrf_token }}
+        
+        {{ form.id_produto.label }} 
+        {{ form.id_produto }}
+        <br>
+        <br>
+        {{ form.qtd_produto.label }} 
+        {{ form.qtd_produto }}
+        <br>
+        <br>
+        {{ form.status_estoque.label }} 
+        {{ form.status_estoque }}
+        <br>
+        <br>
+        {{ form.id_galpao.label }}
+        {{ form.id_galpao }}
+        <br>
+        
+    </form>
+        <br>
+        <input type="submit" value="Registrar no Estoque" class="btn">
+        <br>
+        <a href="{{ url_for('lista_estoque') }}" class="btn">Controle de estoque</a>
+        <br>
+        <a href="{{ url_for('index') }}" class="btn">Página inicial</a>
+</body>
+</html>
